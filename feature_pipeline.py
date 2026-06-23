@@ -5,9 +5,9 @@ MARKDOWN_COLS = ['MarkDown1', 'MarkDown2', 'MarkDown3', 'MarkDown4', 'MarkDown5'
 
 
 def load_raw_data(path='data/'):
-    train = pd.read_csv(path + 'train.csv', parse_dates=['Date'])
-    test = pd.read_csv(path + 'test.csv', parse_dates=['Date'])
-    features = pd.read_csv(path + 'features.csv', parse_dates=['Date'])
+    train = pd.read_csv(path + 'train.csv.zip', parse_dates=['Date'])
+    test = pd.read_csv(path + 'test.csv.zip', parse_dates=['Date'])
+    features = pd.read_csv(path + 'features.csv.zip', parse_dates=['Date'])
     stores = pd.read_csv(path + 'stores.csv')
     return train, test, features, stores
 
