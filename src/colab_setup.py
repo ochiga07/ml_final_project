@@ -46,6 +46,9 @@ def setup_project(
     clone_or_pull_repo(repo_url, repo_path)
     sync_repo_to_drive(repo_path, drive_repo)
 
+    src_path = os.path.join(drive_repo, 'src')
+    if src_path not in sys.path:
+        sys.path.insert(0, src_path)
     if drive_repo not in sys.path:
         sys.path.append(drive_repo)
 
